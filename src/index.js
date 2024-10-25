@@ -3,6 +3,7 @@ import dotenv from "dotenv";
 import cors from "cors";
 import cookieParser from "cookie-parser";
 import categoryRoute from "./routes/route.category.js";
+import productRoute from "./routes/route.product.js";
 import connectDB from "./config/db.js";
 import { v2 as cloudinary } from 'cloudinary';
 // Environment Variable configuration
@@ -30,7 +31,8 @@ app.use(cookieParser());
 
 
 // app.use(Routes)
-app.use('/api/category', categoryRoute)
+app.use('/api/category', categoryRoute);
+app.use('/api/product', productRoute);
 
 
 // Database Connection 

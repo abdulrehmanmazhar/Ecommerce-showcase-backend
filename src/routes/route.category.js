@@ -75,6 +75,6 @@ router.post('/create',async (req, res)=>{
 
     category = await category.save();
 
-    res.status(200).json(category);
+    res.status(201).json(category);
 })
 export default router;
